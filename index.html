@@ -5,13 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Mess S007</title>
 <style>
-:root{--bg:#fafafa;--fg:#111;--muted:#777;--line:#e4e4e4;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#111;--fg:#f2f2f2;--muted:#8a8a8a;--line:#2a2a2a}}
-:root[data-theme="dark"]{--bg:#111;--fg:#f2f2f2;--muted:#8a8a8a;--line:#2a2a2a}
+:root{--bg:#fafafa;--fg:#111;--muted:#777;--line:#e4e4e4;--pattern:.16;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#111;--fg:#f2f2f2;--muted:#8a8a8a;--line:#2a2a2a;--pattern:.12}}
+:root[data-theme="dark"]{--bg:#111;--fg:#f2f2f2;--muted:#8a8a8a;--line:#2a2a2a;--pattern:.12}
 html{scroll-padding-top:env(safe-area-inset-top,0px)}
 *{box-sizing:border-box}
-body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif}
-main{width:100%;max-width:360px;padding:24px;text-align:center}
+body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;position:relative}
+body::before{content:"";position:fixed;inset:0;z-index:0;opacity:var(--pattern);pointer-events:none;
+background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cg font-size='30'%3E%3Ctext x='10' y='38' transform='rotate(-12 25 28)'%3E%F0%9F%8D%95%3C/text%3E%3Ctext x='95' y='30' transform='rotate(10 110 20)'%3E%F0%9F%8D%94%3C/text%3E%3Ctext x='50' y='95' transform='rotate(8 65 85)'%3E%F0%9F%8D%9B%3C/text%3E%3Ctext x='118' y='100' transform='rotate(-8 130 90)'%3E%F0%9F%8D%8E%3C/text%3E%3Ctext x='8' y='140' transform='rotate(14 22 130)'%3E%F0%9F%8D%9C%3C/text%3E%3Ctext x='90' y='150' transform='rotate(-10 105 140)'%3E%F0%9F%A5%97%3C/text%3E%3C/g%3E%3C/svg%3E");
+background-size:160px 160px}
+main{position:relative;z-index:1;width:100%;max-width:360px;margin:24px;padding:32px 24px;text-align:center;background:var(--bg);border:1px solid var(--line);border-radius:16px;box-shadow:0 8px 30px rgba(0,0,0,.08)}
 h1{font-size:28px;font-weight:600;letter-spacing:-.02em;margin:0 0 6px}
 p{margin:0 0 32px;color:var(--muted);font-size:14px}
 a.btn{display:block;padding:14px 18px;border:1px solid var(--fg);border-radius:10px;color:var(--fg);text-decoration:none;font-size:15px;font-weight:500;transition:background .15s,color .15s}
@@ -22,7 +25,7 @@ hr{border:0;border-top:1px solid var(--line);margin:0 0 28px}
 <body>
 <main>
   <h1>S007 Mess Book </h1>
-  <p> by Cyclotrone</p>
+  <p>by Cyclotrone</p>
   <hr>
   <a class="btn" href="https://dish-amount-85265489.figma.site/" target="_blank" rel="noopener">Add My Bill →</a>
 </main>
